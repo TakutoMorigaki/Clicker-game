@@ -1,0 +1,37 @@
+
+.center{
+  text-align: center;
+  font-family: 'Yu Gothic';
+}
+
+.game-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.1s ease-out; /* 縮むアニメーションの速度を設定 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 少し影をつける */
+}
+
+.btn:active {
+    transform: scale(0.95); /* クリック時に95%に縮む */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 影も少し縮める */
+}
+
+.Button {
+  text-align: center;
+  margin-bottom: 12px;
+ 
+}

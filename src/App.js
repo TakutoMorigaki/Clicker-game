@@ -6,10 +6,10 @@ function Home() {
   const navigate = useNavigate();
 
   return(
-    <>
+    <div className='home'>
       <h1>クリッカーゲーム(のつもり)</h1><br />
-      <button onClick={() => navigate('/game')}>START</button>
-    </>
+      <button onClick={() => navigate('/game')} className='start'>START</button>
+    </div>
   )
 }
 

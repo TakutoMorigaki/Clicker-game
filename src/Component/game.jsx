@@ -1,8 +1,12 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import './game.css';
+
 
 function Game() {
     const [count, setCount] = useState(0);
     const [roop, setroop] = useState(0);
+    const navigate = useNavigate();
 
 const handleclick = () => {
     if(roop === 0){
@@ -64,16 +68,16 @@ const reset = () => {
 }
 
     return(
-        <>
-      <div className='center'>
-        押したくなる気持ちはわかるけどね。
+      <div className="game-container">
+        <div className='center'>
+          押したくなる気持ちはわかるけどね。
+        </div>
+        <button onClick={handleclick} className="btn">押すなよ？(押した回数{count})</button><br />
+        <div className='Button'>
+          <button onClick={reset}>リセットボタン</button><br />
+          <button onClick={() => navigate('/')}>タイトルに戻る</button>
+        </div>
       </div>
-      <div className='Button'>
-        <button onClick={handleclick}>押すなよ？(押した回数{count})</button>
-        <br />
-        <button onClick={reset}>リセットボタン</button>
-      </div>
-        </>
     );
 }
 
